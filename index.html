@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div class="main_title">Library</div>
+    <!-- <button id="new_book">New Book</button> -->
+    <div class="openBtn">
+        <button id = "new_book" class="openButton" onclick="openForm()"><strong>Add Book</strong></button>
+    </div>
+    <div class="grid-book">
+      <div class="book 0">
+        
+        <p class="title">Cronicas de Paixoes e Caprichos</p>
+        <p class="author">Julia Joana Pina Quinn</p>
+        <p class="pages">365</p>
+        <div>
+          <button class="Read readbutton">Read</button>
+          <button id="killBook">Remove</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bookPopup">
+      <div class="formPopup" id="popupForm">
+        <form class="formContainer" id="form" onsubmit="return saveForm();">
+          <h2>Please Insert the book</h2>
+          <label for="title">
+            <strong>Title</strong>
+          </label>
+          <input type="text" id="title" placeholder="Title" name="title" minlength="1" required>
+          <label for="author">
+            <strong>Author</strong>
+          </label>
+          <input type="text" id="author" placeholder="Author" name="author" minlength="1" required>
+          <label for="pages">
+            <strong>Pages</strong>
+          </label>
+          <input type="number" id="pages" placeholder="100" name="pages" minlength="1"  required>
+          
+          <label class="read">
+            <div>
+                <label for="accepted"><strong>Already readed?</strong></label>
+                <input type="checkbox" id = "accepted" name="read" checked = "read" unchecked = "unread">
+              </div>
+          </label>
+          <div class="buttonsForm">
+            <button type="submit" class="btn">Save</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+</body>
+</html>

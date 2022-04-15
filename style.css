@@ -1,0 +1,221 @@
+*{
+    font-family: monospace;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(245, 245, 245);
+}
+
+.main_title{
+    color: rgb(0, 0, 0);
+    font-size: 10vh;
+    text-align: center;
+    background-color: #dedddd;
+    position: relative;
+}
+
+#new_book{
+    background-color: rgb(32, 199, 211);
+    position:relative;
+    /* left: 40%; */
+    top: 10px;
+    width: 200px;
+    height: 6vh;
+    border-radius: 8px;
+    appearance: auto;
+    border-width: 0;
+    color: white;
+    font-size: 2.5vh;
+    font-weight: bold;
+    box-shadow: 2.5px 5px #0a0a0a0e;
+    cursor: pointer;
+    border-color: rgb(85, 85, 85);
+    border-width: 2px;
+    margin-bottom: 2vh;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+
+.grid-book{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, clamp(300px, 20%, 200px));
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.book{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    max-height: 400px;
+    background-color: rgb(187, 246, 255);
+    border-radius: 10px;
+    padding: 2rem;
+    font-size:180%;
+}
+
+.book > p{
+    padding: 0.5rem;
+    padding-top: 0;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book > div > #killBook {
+    background-color: rgb(211, 32, 32);
+    position: relative;
+    margin: 1vh;
+    margin-bottom: 0;
+    height: 5vh;
+    width: 200px;
+    border-radius: 8px;
+    appearance: auto;
+    border-width: 0;
+    color: white;
+    font-size: 2.5vh;
+    font-weight: bold;
+    box-shadow: 2.5px 5px #0a0a0a0e;
+    cursor: pointer;
+    border-color: rgb(85, 85, 85);
+    border-width: 1px;
+}
+
+.title::before{
+    content: "Title: ";
+    font-weight: bold;
+}
+
+.author::before{
+    content: "Author: ";
+    font-weight: bold;
+}
+
+.pages::before{
+    content: "Pages: ";
+    font-weight: bold;
+}
+
+.notRead{
+    background-color: rgb(211, 32, 32);
+    position: relative;
+    margin: 1vh;
+    height: 5vh;
+    width: 200px;
+    border-radius: 8px;
+    appearance: auto;
+    border-width: 0;
+    color: white;
+    font-size: 2.5vh;
+    font-weight: bold;
+    box-shadow: 2.5px 5px #0a0a0a0e;
+    cursor: pointer;
+    border-color: rgb(85, 85, 85);
+    border-width: 1px;
+}
+
+.Read{
+    background-color: rgb(8, 173, 8);
+    position: relative;
+    margin: 1vh;
+    height: 5vh;
+    width: 200px;
+    border-radius: 8px;
+    appearance: auto;
+    border-width: 0;
+    color: white;
+    font-size: 2.5vh;
+    font-weight: bold;
+    box-shadow: 2.5px 5px #0a0a0a0e;
+    cursor: pointer;
+    border-color: rgb(85, 85, 85);
+    border-width: 1px;
+}
+
+
+
+
+.openButton {
+    border: none;
+    border-radius: 5px;
+    background-color: #1c87c9;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;
+    position: fixed;
+}
+.bookPopup {
+    position: relative;
+    text-align: center;
+    font-size: 2vh;
+}
+.formPopup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, 5%);
+}
+.formContainer {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 1vh;
+    width: calc(max(300px,25vw));
+    height: auto;
+    max-width: 500px;
+    max-height: 500px;
+    padding: 20px;
+    background-color: #fff;
+}
+.formContainer input[type=title],
+.formContainer input[type=author] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 20px 0;
+    border: none;
+    background: #eee;
+}
+.formContainer input[type=title]:focus,
+.formContainer input[type=author]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.formContainer > #accepted{
+    width: 20px;
+}
+
+.buttonsForm{
+    display: flex;
+    justify-content: space-around;
+    min-width: auto;
+}
+
+.formContainer .btn {
+    padding: 12px 20px;
+    border: none;
+    background-color: #8ebf42;
+    color: #fff;
+    cursor: pointer;
+    width: 5vw;
+    min-width: fit-content;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+.formContainer .cancel {
+    background-color: #cc0000;
+}
+.formContainer .btn:hover,
+.openButton:hover {
+    opacity: 1;
+}
